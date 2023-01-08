@@ -104,16 +104,16 @@ body {
     }
   }
   /* ===============HEADER============= */
-   @media screen and (max-width:767px) {
-    .header {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
+   @media screen and (max-width:767px){
     .site-nav {
         display: none;
     }
     .contacts {
         display: none;
+    }
+    .header {
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
     .header-box {
         display: flex;
@@ -351,7 +351,7 @@ body {
     
         transition: color var(--animation);
     }
-    
+}
     
 
 
