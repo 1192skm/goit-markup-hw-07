@@ -114,6 +114,9 @@ body {
     .header {
         padding-top: 24px;
         padding-bottom: 24px;
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px rgba(46, 47, 66, 0.16), 
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     }
     .header-box {
         display: flex;
@@ -352,8 +355,139 @@ body {
         transition: color var(--animation);
     }
 }
-    
+/* ===================Hero================= */
 
+.hero {
+        background-color: var(--heavybg-color);
+        text-align: center;
+        padding-top: 112px;
+        padding-bottom: 112px;
+}
+.hero-overlay {
+    display: block;
+    max-width: 428px;
+    height: 432px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/bg-image-mob.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero-overlay {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/bg-image-mob@2x.jpg);
+    }
+  }
+.hero-title{
+        margin-bottom: 72px;
+        padding-right: 15px;
+        padding-left: 15px;
+    
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        color: var(--bg-color);
+}
+.button{
+        display: inline-block;
+        border: 1px solid transparent;
+        min-width: 170px;
+        padding: 16px 32px;
+        border-radius: 4px;
+        
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.19;
+        align-items: center;
+        letter-spacing: 0.04em;
+        color: var(--bg-color);
+        background-color: var(--primary-brand);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: box-shadow var(--animation), 
+        background-color var(--animation);
+}
+.button:hover,
+.button:focus {
+        background-color: var(--pressed-color);
+        box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px rgba(46, 47, 66, 0.16), 
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+@media screen and (min-width:768px) {
+    .hero {
+        padding-top: 112px;
+        padding-bottom: 108px;
+    }
+    .hero-overlay {
+        max-width: 768px;
+        height: 436px;
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/bg-image-tablet.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        .hero-overlay {
+            background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+                ),
+                url(../images/bg-image-tablet@2x.jpg);
+        }
+      }
+    .hero-title{
+        margin-bottom: 40px;
+    
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+    }
+}
+@media screen and (min-width:1200px) {
+    .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+    .hero-overlay {
+        max-width: 1440px;
+        height: 600px;
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/bg-image-dsktp.jpg);
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        .hero-overlay {
+            background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+                ),
+                url(../images/bg-image-dsktp@2x.jpg);
+        }
+      }
+    .hero-title{
+        margin-bottom: 48px;
+    }
+}
 
 
 
@@ -880,7 +1014,7 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Modal-window */
+/*==================== Modal-window =====================*/
 .backdrop {
     position: fixed;
     top: 0;
@@ -907,8 +1041,8 @@ body {
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px 24px;
 
-    width: 408px;
-    height: 576px;
+    max-width: 392px;
+    min-height: 586px;
     background: var(--modal-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -948,9 +1082,9 @@ body {
 }
 .modal-title {
     margin-bottom: 16px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 1.5x;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--title-color);
@@ -1055,4 +1189,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-weight: 500;
+}
+@media screen and (min-width:480px) {
+    .modal {
+        width: 392px;
+        height: 586px;
+    }
+}
+@media screen and (min-width:768px) {
+    .modal {
+        width: 408px;
+        height: 586px;
+    }
 }
