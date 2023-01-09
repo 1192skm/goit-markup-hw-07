@@ -585,6 +585,21 @@ body {
         letter-spacing: 0.02em;
     }
 }
+/*================= Section 2 ================= */
+.featers {
+    display: flex;
+}
+.featers .item {
+    width: calc((100%-48px)/3);
+}
+.featers .item:not(:nth-child(3n)) {
+    margin-right: 24px;
+}
+@media screen and (max-width: 1199.98px) {
+    .worklist {
+        display: none;
+    }
+}
 
 
 
