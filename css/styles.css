@@ -72,7 +72,7 @@ body {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: 1.33;
+    line-height: 1.17;
     align-items: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -905,26 +905,52 @@ body {
 }
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 72px;
-    justify-content: center;
+    justify-content: flex-start;
+    row-gap: 16px;
+    column-gap: 24px;
+    width: 300px;
 }
-.buttons .item + .item {
-    margin-left: 24px;
+@media screen and (min-width:768px) {
+    .buttons {
+        flex-wrap: nowrap;
+        justify-content: center;
+        row-gap: 0;
+        column-gap: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .buttons .item + .item {
+        margin-left: 24px;
+    }
 }
+
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -24px;
+    /* margin-right: -24px; */
     margin-bottom: -48px;
+    justify-content: center;
+}
+@media screen and (min-width:768px){
+    .portfolio-list {
+        margin-right: -24px;
+    }
 }
 .portfolio-list .link {
     display: block;
 }
 .portfolio-list .item {
-    margin-right: 24px;
+    /* margin-right: 24px; */
     margin-bottom: 48px;
     width: 360px;
     transition: box-shadow var(--animation);    
+}
+@media screen and (min-width:768px){
+    .portfolio-list .item {
+        margin-right: 24px;
+    }
 }
 .portfolio-list .item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
@@ -1039,10 +1065,16 @@ body {
     transform: translate(-50%, -50%);
     padding: 72px 16px 24px 16px;
 
-    width: 392px;
+    width: calc(100% - 120px);
     background: var(--modal-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+@media screen and (min-width:480px) {
+    .modal{
+        width: 392px;
+    }
+    
 }
 @media screen and (min-width:768px) {
     .modal {
