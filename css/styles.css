@@ -1063,7 +1063,7 @@ body {
     background-color: rgba(46, 47, 66, 0.4);
 
     transition: opacity var(--animation),
-    visibility var(--animation),
+    visibility var(--animation);
 }
 .backdrop.is-hidden {
     opacity: 0;
